@@ -1,6 +1,6 @@
-nome = "Faahbio"
-altura = 1.68
-peso = 60
-imc = peso / (altura * altura)
+name = input("What's your name: ")
+height_meters = float(input("Tell me your height in meters: "))
+weight_kg = float(input("And how much do you weight (in kg): "))
+bmi = weight_kg / (height_meters * height_meters)
 
-print("Seu IMC é de: " + str(imc))
+print(f"{name}, your BMI is: {bmi:.2f}")

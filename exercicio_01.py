@@ -1,14 +1,32 @@
-nome = "Faahbio"
-sobrenome = "R"
-idade = "?"
-ano_nascimento = 1994
-maior_de_idade = True
-altura_metros = 1.68
+import os
 
-print("Nome:", nome)
-print("Sobrenome:", sobrenome)
-print("Idade:", idade)
-print("Ano de nascimento:", ano_nascimento)
-print("É maior de idade?:", maior_de_idade)
-print("Altura em metros:", altura_metros)
+name = input("What's your name: ")
+nickname = input("Tell me your nickname: ")
+age = int(input("What's your age: "))
+height_meters = float(input("How tall are you: "))
 
+os.system('cls')
+
+print(f'Your name is {name}')
+print(f'Your nickname is {nickname}')
+print(f"You're {age} years old")
+
+if age >= 18:
+    
+    print("You can drink and drive")
+
+else:
+    
+    print("You're too young to drink and drive")
+    
+if height_meters <= 1.60:
+    
+    print("You're small")
+
+elif (height_meters > 1.60) and (height_meters <= 1.80):
+    
+    print("You have an average height")
+
+else:
+    
+    print("You are really tall")

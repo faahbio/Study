@@ -2,12 +2,20 @@
 # Code in Portuguese
 
 import re
+import sys
 
 while True:
     
     cpf_informado = input('Informe um CPF: ')
 
     cpf_num = re.sub(r'[^0-9]', '', cpf_informado)
+    
+    sequencial = cpf_informado == (cpf_informado[0] * len(cpf_informado))
+    
+    if sequencial:
+        
+        print('CPF inválido, repetição detectada')
+        sys.exit()
 
     nove_digitos = cpf_num[:9]
 

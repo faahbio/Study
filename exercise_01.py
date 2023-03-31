@@ -12,21 +12,21 @@ print(f'Your nickname is {nickname}')
 print(f"You're {age} years old")
 
 if age >= 18:
-    
+
     print("You can drink and drive")
 
 else:
-    
+
     print("You're too young to drink and drive")
-    
+
 if height_meters <= 1.60:
-    
+
     print("You're small")
 
 elif (height_meters > 1.60) and (height_meters <= 1.80):
-    
+
     print("You have an average height")
 
 else:
-    
+
     print("You are really tall")

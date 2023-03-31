@@ -5,15 +5,15 @@ import re
 import sys
 
 while True:
-    
+
     cpf_informado = input('Informe um CPF: ')
 
     cpf_num = re.sub(r'[^0-9]', '', cpf_informado)
-    
+
     sequencial = cpf_informado == (cpf_informado[0] * len(cpf_informado))
-    
+
     if sequencial:
-        
+
         print('CPF inválido, repetição detectada')
         sys.exit()
 
@@ -24,7 +24,7 @@ while True:
     resultado_1 = 0
 
     for digito in nove_digitos:
-        
+
         resultado_1 += int(digito) * contador_1
         contador_1 -= 1
 
@@ -39,7 +39,7 @@ while True:
     resultado_2 = 0
 
     for digito in dez_digitos:
-        
+
         resultado_2 += int(digito) * contador_2
         contador_2 -= 1
 
@@ -48,9 +48,9 @@ while True:
     segundo_digito = segundo_digito if segundo_digito <= 9 else 0
 
     if (primeiro_digito == int(cpf_num[-2])) and (segundo_digito == int(cpf_num[-1])):
-        
+
         print('CPF válido')
 
     else:
-        
+
         print('CPF inválido')

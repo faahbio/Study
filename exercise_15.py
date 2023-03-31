@@ -13,22 +13,24 @@ list_of_lists_of_integers = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
+
 def find_first_duplicate(list_of_integers):
-    
+
     numbers = set()
     first_dup = -1
-    
+
     for number in list_of_integers:
-        
+
         if number in numbers:
-            
+
             first_dup = number
             break
-        
-        numbers.add(number)           
-    
+
+        numbers.add(number)
+
     return first_dup
-    
+
+
 for list_ in list_of_lists_of_integers:
 
     print(find_first_duplicate(list_))
